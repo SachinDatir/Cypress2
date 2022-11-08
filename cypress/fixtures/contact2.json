@@ -1,0 +1,27 @@
+[
+
+    {
+        "firstName": "sachin",
+        "lastName": "Datir",
+        "email": "sdatir46@gmail.com",
+        "message": "iam lerning fixture"
+    },
+    {
+        "firstName": "pranamya",
+        "lastName": "pangare",
+        "email": "pranamya@gmail.com",
+        "message": "iam lerning fixture"
+    },
+    {
+        "firstName": "pankaj",
+        "lastName": "more",
+        "email": "pankaj@gmail.com",
+        "message": "iam lerning fixture"
+    }
+
+
+
+
+
+
+]
