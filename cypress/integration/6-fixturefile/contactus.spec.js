@@ -1,7 +1,7 @@
 ///<reference types="cypress" />
 import users from '../../fixtures/contact2.json'
 import info from '../../fixtures/contact.json'
-import contact from '../POm/radionExport'
+import contact from '../8-POM/radionExport'
 
 let contactus = new contact()
 

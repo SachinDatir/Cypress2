@@ -1,3 +1,4 @@
+import '@shelex/cypress-allure-plugin';
 // ***********************************************************
 // This example support/index.js is processed and
 // loaded automatically before your test files.

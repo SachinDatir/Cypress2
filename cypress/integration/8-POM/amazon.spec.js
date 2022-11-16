@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
-import GenericMethod from "../PomExport/generic";
-import CSSselector from "../PomExport/selector";
+import GenericMethod from "../9-PomExport/generic";
+import CSSselector from "../9-PomExport/selector";
 let obj1 = new CSSselector()
 
 describe('amazon.com', () => {
@@ -14,6 +14,7 @@ describe('amazon.com', () => {
         GenericMethod.clickMobile(obj1.selectElement.mobileClick)
         cy.get('#mbb-offeringID-1').click().should('be.checked')
         GenericMethod.AddtoCart(obj1.selectElement.addTOcart)
+        cy.wait(4000)
         GenericMethod.Cart(obj1.selectElement.cartButton)
        
         

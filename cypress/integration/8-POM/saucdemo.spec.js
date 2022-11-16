@@ -1,5 +1,5 @@
-import GenericMethod from "../PomExport/generic";
-import CSSselector from "../PomExport/selector";
+import GenericMethod from "../9-PomExport/generic";
+import CSSselector from "../9-PomExport/selector";
 
 let obj = new CSSselector()
 describe('saucdemo website', () => {

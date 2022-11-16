@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+/// <reference types="@shelex/cypress-allure-plugin" />
+const allureWriter = require("@shelex/cypress-allure-plugin/writer");
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -19,9 +21,31 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  allureWriter(on, config);
+  return config;
 }
 
-const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
 module.exports = (on, config) => {
-  on('task', {downloadFile})
+  on('task', { downloadFile })
 }
+
+
+
+const xlsx = require('node-xlsx').default;
+const fs = require('fs'); // for file
+const path = require('path'); // for file path
+module.exports = (on, config) => {
+  on('task', {
+    parseXlsx({ filePath }) {
+      return new Promise((resolve, reject) => {
+        try {
+          const jsonData = xlsx.parse(fs.readFileSync(filePath));
+          resolve(jsonData);
+        } catch (e) {
+          reject(e);
+        }
+      });
+    }
+  });
+} 

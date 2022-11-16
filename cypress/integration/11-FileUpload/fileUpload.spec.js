@@ -1,6 +1,8 @@
 ///<reference types="cypress" />
 
 
+// https://www.npmjs.com/package/cypress-file-upload
+
 describe('FileUpload functionality in cypress', () => {
     it('TC01 first fileUpload', () => {
         cy.visit('http://automationpractice.com/index.php?controller=contact')
@@ -33,5 +35,3 @@ describe('FileUpload functionality in cypress', () => {
 
 
 
-
-// https://www.npmjs.com/package/cypress-file-upload

@@ -40,5 +40,9 @@ class GenericMethod {
         cy.get(element).click({ force: true })
 
     }
+
+    static PinCode(element,value){
+        cy.get(element).type(value)
+    }
 }
 export default GenericMethod
