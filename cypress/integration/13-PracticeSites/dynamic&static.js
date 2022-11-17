@@ -35,7 +35,7 @@ describe('codenboxautomationlab.com', () => {
         cy.url().should('contain', 'practice')
     })
     it.skip('TC06-switch tab example', () => {
-        cy.get('#opentab').invoke('removeAttr','target').click()
+        cy.get('#opentab').invoke('removeAttr', 'target').click()
     })
     it.skip('switch to alert examples', () => {
         cy.get('#name').type('sachin')
