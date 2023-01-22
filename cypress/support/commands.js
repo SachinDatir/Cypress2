@@ -24,12 +24,16 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+///<reference types="cypress" />
+
+///<reference types="cypress-xpath" />
+
+require('cypress-xpath');
 //file upload
 import 'cypress-file-upload';
 
 // img download
 require('cypress-downloadfile/lib/downloadFileCommand')
-
 
 
 

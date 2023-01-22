@@ -29,12 +29,20 @@ class CSSselector {
         cartButton: '#attach-view-cart-button-form',
 
         // flipcart
-        FlipcartSite:'https://www.flipkart.com/',
-        searchFLIPElement:'._3704LK',
-        searchFLIPButton:'.L0Z3Pu',
-        MobileCLICK:'._1fQZEK',
-        pincode:'._36yFo0',
-        checkPin:'._2P_LDn'
+        FlipcartSite: 'https://www.flipkart.com/',
+        searchFLIPElement: '._3704LK',
+        searchFLIPButton: '.L0Z3Pu',
+        MobileCLICK: '._1fQZEK',
+        pincode: '._36yFo0',
+        checkPin: '._2P_LDn',
+
+        // Webdriver
+        Tab: '[href="Contact-Us/contactus.html"]',
+        name: '[name="first_name"]',
+        lastname: '[name="last_name"]',
+        email: '[name="email"]',
+        mesg: '[name="message"]',
+        submit: '[type="submit"]'
 
     }
 }

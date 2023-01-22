@@ -1,5 +1,8 @@
 
 class GenericMethod {
+    static Multipletab(element) {
+        cy.get(element).invoke('removeAttr', 'target').click({ force: true })
+    }
     static visitURL(url) {
         cy.visit(url)
     }
@@ -41,7 +44,7 @@ class GenericMethod {
 
     }
 
-    static PinCode(element,value){
+    static PinCode(element, value) {
         cy.get(element).type(value)
     }
 }

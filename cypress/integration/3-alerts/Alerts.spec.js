@@ -46,7 +46,7 @@ describe('Alert(),confirm(),prompt()', () => {
     // click on cancel button
     it('verify js prompt()--cancel', () => {
         cy.window().then((win) => {
-            cy.stub(win, 'prompt').returns(null)    
+            cy.stub(win, 'prompt').returns(null)
         })
         cy.contains('Click for JS Prompt').click()
         cy.get('#result').should('have.text', 'You entered: null')

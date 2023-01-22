@@ -1,0 +1,15 @@
+describe('check the login functionality of trip.com', () => {
+    it('login functionality with valid credentials', () => {
+        cy.visit('https://www.trip.com/')
+        cy.get('.mc-hd__login-btn').click({ force: true })
+        cy.get('.r_input>.one_txt_cut').type('sdatir@gmail.com')
+        cy.get('#ibu_login_submit').click()
+        cy.wait(2000)
+        cy.get(':nth-child(2)> .r_input > .one_txt_cut').type('Skd@6661',{force:true})
+        cy.get('#ibu_login_submit').click()
+        cy.wait(2000)
+        cy.get('.mc-hd__account-username').click()
+        cy.get('.mc-hd__account-link').first().click()
+        cy.get('.empty-image-con').should('be.visible')
+    })
+})
