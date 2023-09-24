@@ -25,6 +25,11 @@ describe('verify the functionality for table in cypress', () => {
         })
     })
     it.only('verify the  table via utility', function () {
+
+
+
+
+        
         cy.visit('http://www.webdriveruniversity.com/Data-Table/index.html')
         cy.validateTable(1, 159)
         cy.validateTable(2, 163)
