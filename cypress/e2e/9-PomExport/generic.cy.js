@@ -7,7 +7,7 @@ class GenericMethod {
         cy.visit(url)
     }
     static EnterVal(element, value) {
-        cy.get(element).type(value)
+        cy.get(element).clear().should('be.empty').type(value)
     }
     static ClickE(element) {
         cy.get(element).click()

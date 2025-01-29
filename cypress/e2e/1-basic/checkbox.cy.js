@@ -1,9 +1,9 @@
 ///<reference types="cypress" />
-describe('To check checkboxes and radioButtons functionality', () => {
+describe('To check checkboxes and radioButtons functionality',{tags:"@smoke"}, () => {
     beforeEach(() => {
         cy.visit('https://www.ironspider.ca/forms/checkradio.htm')
     })
-    it('TC-01 By using check', () => {
+    it('TC-01 By using check',{tags:"@smoke"}, () => {
         cy.get('input[type="checkbox"]').each((el) => {
             cy.wrap(el).check().should('be.checked')
         })

@@ -1,8 +1,8 @@
 ///<reference types="cypress" />
 describe('Goibibo functionality', () => {
-    // beforeEach(() => {
-    //     cy.visit('https://www.goibibo.com/')
-    // })
+    beforeEach(() => {
+        cy.visit('https://www.goibibo.com/')
+    })
 
 
 
@@ -34,14 +34,14 @@ describe('Goibibo functionality', () => {
 
 
 
-    it.skip('TC02', () => {
+    it.only('TC02', () => {
         cy.get('.fswFld').first().find('p').type('Pu')
         cy.wait(2000)
-        cy.get('.eIvaEJ').each((el) => {
+        cy.get('#autoSuggest-list>li>div').each((el) => {
             // cy.log(el.text())
-            let tex = el.text().trim()
-            if (tex == 'Udaipur') {
-                el.click()
+            let text = el.text().trim()
+            if (text.includes('Udaipur')) {
+                cy.wrap(el).click()
 
             }
         })

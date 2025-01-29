@@ -1,4 +1,4 @@
-///<reference types="cypress" />
+// /<reference types="cypress" />
 
 describe('Validate the kesari tours', () => {
     beforeEach(() => {
@@ -17,8 +17,8 @@ describe('Validate the kesari tours', () => {
                     let text = ele.find('a:first')
                     // cy.log(text)
                     if (text.attr('href').startsWith('/')) {
-                        cy.wrap(text).click({ force: true })
-                        cy.url().should('contain', arr[index])
+                        cy.wrap(text).click({ force: true })//
+                        cy.url().should('contain', arr[index])//
                     }
                 })
             })
@@ -28,7 +28,8 @@ describe('Validate the kesari tours', () => {
             "/Tailor-Made", "http://www.kesarimice.in", "/kesari-forex", "/visa", "/cruises", "/Deals", "/About-Us"]
         cy.visit('https://www.kesari.in/')
         cy.get('nav[id="main-menu"]').find('ul:first').children().each((el,index) => {
-              let text = el.find('a').first()
+              let text = el.val
+              .find('a').first()
               cy.log(text)
               if(text.attr('href').startsWith('/')){
                 cy.wrap(text).click({force:true})
@@ -36,23 +37,5 @@ describe('Validate the kesari tours', () => {
               }
         })
     })
-    //     it('Validate the each tab link', () => {
-    //         let arr = []
-    //         cy.get('#main-menu>ul>li').find('a:first').each((el) => {
-    //             let href = el.attr('href');
-    //             // cy.log(href)
-    //             arr.push(href)
-    //         })
-    //             .then(() => {
-    //                 cy.get('#main-menu>ul>li').each((ele, index) => {
-    //                     let text = ele.find('a:first')
-    //                     // cy.log(text)
-    //                     if (text.attr('href').startsWith('/')) {
-    //                         cy.wrap(text).click({ force: true })
-    //                         cy.url().should('contain', arr[index])
-    //                         cy.go('back')
-    //                     }
-    //                 })
-    //             })
-    //     })
-})
+
+})   
